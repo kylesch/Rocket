@@ -1,0 +1,4 @@
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\ImageCompare\bin\Debug\ImageCompare.dll
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\ImageCompare\bin\Debug\ImageCompare.pdb
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\ImageCompare\obj\Debug\ImageCompare.dll
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\ImageCompare\obj\Debug\ImageCompare.pdb

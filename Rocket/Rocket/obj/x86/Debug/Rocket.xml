@@ -1,0 +1,184 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Rocket
+</name>
+</assembly>
+<members>
+<member name="M:Rocket.DeviceManagement.DeviceNameMatch(System.Windows.Forms.Message,System.String)">
+	<summary>
+ Compares two device path names. Used to find out if the device name 
+ of a recently attached or removed device matches the name of a 
+ device the application is communicating with.
+ </summary>
+	<param name="m"> a WM_DEVICECHANGE message. A call to RegisterDeviceNotification
+ causes WM_DEVICECHANGE messages to be passed to an OnDeviceChange routine.. </param>
+	<param name="mydevicePathName"> a device pathname returned by 
+ SetupDiGetDeviceInterfaceDetail in an SP_DEVICE_INTERFACE_DETAIL_DATA structure. </param>
+	<returns>
+ True if the names match, False if not.
+ </returns>
+</member><member name="M:Rocket.DeviceManagement.FindDeviceFromGuid(System.Guid,System.String[]@)">
+	<summary>
+ Use SetupDi API functions to retrieve the device path name of an
+ attached device that belongs to a device interface class.
+ </summary>
+	<param name="myGuid"> an interface class GUID. </param>
+	<param name="devicePathName"> a pointer to the device path name 
+ of an attached device. </param>
+	<returns>
+  True if a device is found, False if not. 
+ </returns>
+</member><member name="M:Rocket.DeviceManagement.RegisterForDeviceNotifications(System.String,System.IntPtr,System.Guid,System.IntPtr@)">
+	<summary>
+ Requests to receive a notification when a device is attached or removed.
+ </summary>
+	<param name="devicePathName"> handle to a device. </param>
+	<param name="formHandle"> handle to the window that will receive device events. </param>
+	<param name="classGuid"> device interface GUID. </param>
+	<param name="deviceNotificationHandle"> returned device notification handle. </param>
+	<returns>
+ True on success.
+ </returns>
+</member><member name="M:Rocket.DeviceManagement.StopReceivingDeviceNotifications(System.IntPtr)">
+	<summary>
+ Requests to stop receiving notification messages when a device in an
+ interface class is attached or removed.
+ </summary>
+	<param name="deviceNotificationHandle"> handle returned previously by
+ RegisterDeviceNotification. </param>
+</member><member name="T:Rocket.DeviceManagement">
+	<summary>
+ For detecting devices and receiving device notifications.
+ </summary>
+</member><member name="M:Rocket.Hid.GetFeatureReport(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Byte[]@)">
+	<summary>
+ reads a Feature report from the device.
+ </summary>
+	<param name="hidHandle"> the handle for learning about the device and exchanging Feature reports. </param>
+	<param name="inFeatureReportBuffer"> contains the requested report.</param>
+	<returns> read success</returns>
+</member><member name="M:Rocket.Hid.GetInputReportViaControlTransfer(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Byte[]@)">
+	<summary>
+ reads an Input report from the device using a control transfer.
+ </summary>
+	<param name="hidHandle"> the handle for learning about the device and exchanging Feature reports. </param>
+	<param name="inputReportBuffer"> contains the requested report. </param>
+	<returns> read success </returns>
+</member><member name="M:Rocket.Hid.SendFeatureReport(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Byte[])">
+	<summary>
+ writes a Feature report to the device.
+ </summary>
+	<param name="hidHandle"> handle to the device.  </param>
+	<param name="outFeatureReportBuffer"> contains the report ID and report data. </param>
+	<returns>
+  True on success. False on failure.
+ </returns>
+</member><member name="M:Rocket.Hid.SendOutputReportViaControlTransfer(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Byte[])">
+	<summary>
+ writes an Output report to the device using a control transfer.
+ </summary>
+	<param name="hidHandle"> handle to the device.  </param>
+	<param name="outputReportBuffer"> contains the report ID and report data. </param>
+	<returns>
+  True on success. False on failure.
+ </returns>
+</member><member name="M:Rocket.Hid.FlushQueue(Microsoft.Win32.SafeHandles.SafeFileHandle)">
+	<summary>
+ Remove any Input reports waiting in the buffer.
+ </summary>
+	<param name="hidHandle"> a handle to a device.   </param>
+	<returns>
+ True on success, False on failure.
+ </returns>
+</member><member name="M:Rocket.Hid.GetDeviceCapabilities(Microsoft.Win32.SafeHandles.SafeFileHandle)">
+	<summary>
+ Retrieves a structure with information about a device's capabilities. 
+ </summary>
+	<param name="hidHandle"> a handle to a device. </param>
+	<returns>
+ An HIDP_CAPS structure.
+ </returns>
+</member><member name="M:Rocket.Hid.GetHidUsage(Rocket.Hid.HIDP_CAPS)">
+	<summary>
+ Creates a 32-bit Usage from the Usage Page and Usage ID. 
+ Determines whether the Usage is a system mouse or keyboard.
+ Can be modified to detect other Usages.
+ </summary>
+	<param name="MyCapabilities"> a HIDP_CAPS structure retrieved with HidP_GetCaps. </param>
+	<returns>
+ A string describing the Usage.
+ </returns>
+</member><member name="M:Rocket.Hid.GetNumberOfInputBuffers(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Int32@)">
+	<summary>
+ Retrieves the number of Input reports the host can store.
+ </summary>
+	<param name="hidDeviceObject"> a handle to a device  </param>
+	<param name="numberOfInputBuffers"> an integer to hold the returned value. </param>
+	<returns>
+ True on success, False on failure.
+ </returns>
+</member><member name="M:Rocket.Hid.SetNumberOfInputBuffers(Microsoft.Win32.SafeHandles.SafeFileHandle,System.Int32)">
+	<summary>
+ sets the number of input reports the host will store.
+ Requires Windows XP or later.
+ </summary>
+	<param name="hidDeviceObject"> a handle to the device.</param>
+	<param name="numberBuffers"> the requested number of input reports.  </param>
+	<returns>
+ True on success. False on failure.
+ </returns>
+</member><member name="M:Rocket.Hid.IsWindowsXpOrLater">
+	<summary>
+ Find out if the current operating system is Windows XP or later.
+ (Windows XP or later is required for HidD_GetInputReport and HidD_SetInputReport.)
+ </summary>
+</member><member name="M:Rocket.Hid.IsWindows98Gold">
+	<summary>
+ Find out if the current operating system is Windows 98 Gold (original version).
+ Windows 98 Gold does not support the following:
+ Interrupt OUT transfers (WriteFile uses control transfers and Set_Report).
+ HidD_GetNumInputBuffers and HidD_SetNumInputBuffers
+ (Not yet tested on a Windows 98 Gold system.)
+ </summary>
+</member><member name="M:Rocket.Hid.DisplayException(System.String,System.Exception)">
+	<summary>
+ Provides a central mechanism for exception handling.
+ Displays a message box that describes the exception.
+ </summary>
+	<param name="moduleName">  the module where the exception occurred. </param>
+	<param name="e"> the exception </param>
+</member><member name="T:Rocket.Hid">
+	<summary>
+ For communicating with HID-class USB devices.
+ The ReportIn class handles Input reports and Feature reports that carry data to the host.
+ The ReportOut class handles Output reports and Feature reports that that carry data to the device.
+ Other routines retrieve information about and configure the HID.
+ </summary>
+</member><member name="P:Rocket.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Rocket.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Rocket.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:Rocket.DeviceManagement.DBT_DEVICEARRIVAL">
+	<remarks>
+ API declarations relating to device management (SetupDixxx and 
+ RegisterDeviceNotification functions).
+ Constants are from dbt.h and setupapi.h.
+</remarks>
+</member><member name="T:Rocket.FileIO">
+	<summary>
+ API declarations relating to file I/O.
+ </summary>
+</member>
+</members>
+</doc>

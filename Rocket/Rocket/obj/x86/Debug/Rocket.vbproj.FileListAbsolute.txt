@@ -1,0 +1,33 @@
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\Rocket.exe
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\Rocket.pdb
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\Rocket.xml
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\USBHIDDRIVER.dll
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\nunit.framework.dll
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\USBHIDDRIVER.pdb
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\USBHIDDRIVER.xml
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\bin\Debug\nunit.framework.xml
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.vbprojResolveAssemblyReference.cache
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.Form1.resources
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.Resources.resources
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.vbproj.GenerateResource.Cache
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.exe
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.xml
+C:\Users\E0085464\AppData\Local\Temporary Projects\Rocket\obj\x86\Debug\Rocket.pdb
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\Rocket.exe
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\Rocket.pdb
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\Rocket.xml
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\DirectShowLib-2005.dll
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\USBHIDDRIVER.dll
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\nunit.framework.dll
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\USBHIDDRIVER.pdb
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\bin\Debug\USBHIDDRIVER.xml
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.vbprojResolveAssemblyReference.cache
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.Rocket.resources
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.Resources.resources
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.vbproj.GenerateResource.Cache
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.exe
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.xml
+C:\Users\E0085464\Documents\Visual Studio 2010\Projects\Rocket\Rocket\obj\x86\Debug\Rocket.pdb
+C:\Users\E0085464\Documents\GitHub\Rocket\Rocket\Rocket\obj\x86\Debug\Rocket.exe
+C:\Users\E0085464\Documents\GitHub\Rocket\Rocket\Rocket\obj\x86\Debug\Rocket.xml
+C:\Users\E0085464\Documents\GitHub\Rocket\Rocket\Rocket\obj\x86\Debug\Rocket.pdb
